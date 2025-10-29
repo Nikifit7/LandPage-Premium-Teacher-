@@ -32,7 +32,7 @@ The goal of this project is to create a **professional, conversion-oriented land
  **Direct WhatsApp Contact Buttons**  
 Each CTA button opens a pre-filled WhatsApp message:
 ```html
-<a href="https://wa.me/436767580501?text=Hi,+I+want+to+book+my+spot" target="_blank">💬 Start Now</a>
+<a href="https://wa.me/436700050001?text=Hi,+I+want+to+book+my+spot" target="_blank">💬 Start Now</a>
  3D Tilt Effect on Main Image
 The teacher photo has a 3D perspective with a smooth hover animation using:
 A color palette combining blue, white, and subtle red accents, creating a premium visual experience.
