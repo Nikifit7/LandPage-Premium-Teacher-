@@ -1,381 +1,270 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Anderson Teacher — Aulas Premium de Inglês & Alemão</title>
-<meta name="description" content="Aulas personalizadas de inglês e alemão com Anderson. Metodologia prática, foco em conversação, resultados rápidos. Agende via WhatsApp.">
-<link rel="icon" href="favicon.png" type="image/png">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Anderson Teacher — Aulas Premium de Inglês & Alemão</title>
+    <meta name="description" content="Aulas personalizadas de inglês e alemão com Anderson. Metodologia prática, foco em conversação, resultados rápidos. Agende via WhatsApp.">
+    <link rel="icon" href="favicon.png" type="image/png">
 
-<style>
-  :root{
-    --azul:#1E88E5;
-    --laranja:#FF8C00;
-    --vermelho:#E53935;
-    --branco:#FFFFFF;
-    --cinza:#f4f4f9;
-    --texto:#0f1720;
-  }
-  *{box-sizing:border-box}
-  html,body{height:100%}
-  body{
-    margin:0;
-    font-family: "Inter", "Poppins", "Segoe UI", sans-serif;
-    background:var(--cinza);
-    color:var(--texto);
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-  }
+    <style>
+        :root {
+            --azul: #1E88E5;
+            --laranja: #FF8C00;
+            --vermelho: #E53935;
+            --branco: #FFFFFF;
+            --cinza: #f4f4f9;
+            --texto: #0f1720;
+        }
 
-  .top-cta {
-  text-align: center;
-  margin: 30px 0;
-}
+        * { box-sizing: border-box; }
+        
+        body {
+            margin: 0;
+            font-family: "Inter", "Poppins", "Segoe UI", sans-serif;
+            background: var(--cinza);
+            color: var(--texto);
+            -webkit-font-smoothing: antialiased;
+        }
 
-.cta-btn {
-  display: inline-block;
-  padding: 15px 35px;
-  background: linear-gradient(90deg, #004aad, #ff3c00);
-  color: #f4f4f9;
-  font-weight: 600;
-  font-size: 1.1rem;
-  border-radius: 50px;
-  text-decoration: none;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-  transition: all 0.4s ease;
-}
+        /* --- UI Components --- */
+        .top-cta { text-align: center; margin: 30px 0; }
 
-.cta-btn:hover {
-  background: linear-gradient(90deg, #ff3c00, #004aad);
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
+        .cta-btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: linear-gradient(90deg, #004aad, #ff3c00);
+            color: #f4f4f9;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
 
+        .cta-btn:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
 
-  /* HERO cofoto backup no doc*/
-  header.hero{
-    position:relative;
-    min-height:78vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:28px 20px;
-    overflow:hidden;
-    /* background image (external) */
-    background-image: url('https://www.bondguide.de/wp-content/uploads/2018/12/AdobeStock_211278217.jpeg');
-    background-size:cover;
-    background-position:center;
-  }
+        header.hero {
+            position: relative;
+            min-height: 78vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 28px 20px;
+            overflow: hidden;
+            background: #222 url('https://www.bondguide.de/wp-content/uploads/2018/12/AdobeStock_211278217.jpeg') center/cover no-repeat;
+        }
 
-  /* overlays to guarantee contrast */
-  header.hero::before{
-    content:"";
-    position:absolute; inset:0;
-    background: linear-gradient(135deg, rgba(30,136,229,0.80), rgba(229,57,53,0.55));
-    z-index:1;
-  }
-  header.hero::after{
-    content:"";
-    position:absolute; inset:0;
-    background: radial-gradient(circle at top right, rgba(255,255,255,0.12), transparent 40%);
-    z-index:2;
-    pointer-events:none;
-  }
+        header.hero::before {
+            content: "";
+            position: absolute; inset: 0;
+            background: linear-gradient(135deg, rgba(30,136,229,0.80), rgba(229,57,53,0.55));
+            z-index: 1;
+        }
 
-  .hero-inner{
-    position:relative;
-    z-index:3;
-    max-width:1200px;
-    width:100%;
-    display:flex;
-    gap:40px;
-    align-items:center;
-    justify-content:space-between;
-    flex-wrap:wrap-reverse;
-  }
+        .hero-inner {
+            position: relative;
+            z-index: 3;
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap-reverse;
+        }
 
-  /* TEXTO */
-  .hero-copy{
-    flex:1 1 520px;
-    color:var(--branco);
-    padding:20px;
-  }
-  .hero-copy h1{
-    margin:0 0 12px 0;
-    font-size:clamp(1.6rem,3.2vw,2.8rem);
-    line-height:1.02;
-    letter-spacing:0.2px;
-    text-shadow:0 6px 18px rgba(0,0,0,0.4);
-  }
-  .hero-copy p{
-    margin:0 0 20px 0;
-    color:rgba(237, 247, 203, 0.95);
-    font-size:clamp(1rem,1.6vw,1.15rem);
-    line-height:1.6;
-    text-shadow:0 3px 10px rgba(0,0,0,0.25);
-  }
+        .hero-copy { flex: 1 1 520px; color: var(--branco); padding: 20px; }
+        .hero-copy h1 { margin: 0 0 12px 0; font-size: clamp(1.6rem,3.2vw,2.8rem); line-height: 1.02; text-shadow: 0 6px 18px rgba(0,0,0,0.4); }
+        .hero-copy p { margin: 0 0 20px 0; color: rgba(237, 247, 203, 0.95); font-size: clamp(1rem,1.6vw,1.15rem); line-height: 1.6; }
 
-  .hero-cta-row{ display:flex; gap:14px; align-items:center; flex-wrap:wrap; }
+        .hero-cta-row { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
 
-  /* Stylish CTA button */
-  .btn{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    padding:12px 20px;
-    border-radius:12px;
-    font-weight:700;
-    text-decoration:none;
-    color:var(--branco);
-    background:linear-gradient(135deg,var(--azul),var(--laranja));
-    box-shadow:0 10px 30px rgba(30,136,229,0.18);
-    position:relative;
-    overflow:hidden;
-    transition:transform .28s ease, box-shadow .28s ease;
-  }
-  .btn::after{
-    content:"";
-    position:absolute; left:-80px; top:0; height:100%; width:60px;
-    background:rgba(255,255,255,0.18);
-    transform:skewX(-18deg);
-    transition:left .6s cubic-bezier(.2,.9,.2,1);
-  }
-  .btn:hover{ transform:translateY(-6px) scale(1.02); box-shadow:0 20px 50px rgba(30,136,229,0.22);}
-  .btn:hover::after{ left:140%; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--branco);
+            background: linear-gradient(135deg, var(--azul), var(--laranja));
+            transition: transform .28s ease, box-shadow .28s ease;
+            cursor: pointer;
+            border: none;
+        }
 
-  /* pulse para chamar atenção (discreto) */
-  .btn.pulse{ animation: pulse 3s infinite; }
-  @keyframes pulse{
-    0%{ box-shadow:0 0 0 0 rgba(255,140,0,0.10); }
-    70%{ box-shadow:0 0 0 18px rgba(255,140,0,0); }
-    100%{ box-shadow:0 0 0 0 rgba(255,140,0,0); }
-  }
+        .btn:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(30,136,229,0.22); }
+        .btn.pulse { animation: pulse 3s infinite; }
 
-  /* HERO IMAGE wrapper - mantém proporção 5:9 */
-  .hero-image{
-    flex:0 0 420px;
-    max-width:420px;
-    width:100%;
-    perspective:1200px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-  }
-  .tilt-card{
-    width:100%;
-    aspect-ratio:5/9; /* preserva 500x900 proporcional */
-    border-radius:20px;
-    overflow:hidden;
-    transform-style:preserve-3d;
-    transition:transform .18s ease, box-shadow .3s ease;
-    box-shadow: 0 25px 60px rgba(0,0,0,0.35);
-    border:2px solid rgba(255,255,255,0.06);
-    background:linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.03));
-  }
-  .tilt-card img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-    transform: translateZ(12px);
-    transition:transform .35s ease;
-  }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255,140,0,0.4); }
+            70% { box-shadow: 0 0 0 18px rgba(255,140,0,0); }
+            100% { box-shadow: 0 0 0 0 rgba(255,140,0,0); }
+        }
 
-  /* quando em hover aumente profundidade */
-  .tilt-card:hover{ box-shadow:0 40px 90px rgba(0,0,0,0.48); }
-  .tilt-card:active{ transform:translateY(2px) }
+        .hero-image { flex: 0 0 420px; max-width: 420px; width: 100%; perspective: 1200px; display: flex; justify-content: center; }
+        .tilt-card { width: 100%; aspect-ratio: 5/9; border-radius: 20px; overflow: hidden; transform-style: preserve-3d; transition: transform .18s ease; box-shadow: 0 25px 60px rgba(0,0,0,0.35); }
+        .tilt-card img { width: 100%; height: 100%; object-fit: cover; transform: translateZ(12px); }
 
-  /* Seções abaixo da dobra */
-  .container{
-    max-width:1100px;
-    margin:60px auto;
-    padding:0 20px 80px;
-  }
+        .container { max-width: 1100px; margin: 60px auto; padding: 0 20px 80px; }
+        h2 { text-align: center; color: var(--azul); margin-bottom: 18px; }
+        .services { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
 
-  h2{ text-align:center; color:var(--azul); margin-bottom:18px; font-size:1.6rem; }
-  .services{ display:flex; gap:20px; justify-content:center; align-items:stretch; flex-wrap:wrap; }
+        .card { background: var(--branco); border-radius: 14px; padding: 20px; flex: 1 1 280px; box-shadow: 0 10px 30px rgba(16,24,40,0.06); position: relative; transition: .25s; }
+        .card:hover { transform: translateY(-8px); }
 
-  .card{
-    background:var(--branco);
-    border-radius:14px;
-    padding:20px;
-    flex:1 1 280px;
-    box-shadow:0 10px 30px rgba(16,24,40,0.06);
-    position:relative;
-    transition:transform .25s ease, box-shadow .25s ease;
-  }
-  .card:hover{ transform:translateY(-8px); box-shadow:0 18px 45px rgba(16,24,40,0.08); }
+        .badge { position: absolute; right: 12px; top: -12px; background: var(--laranja); color: var(--branco); padding: 6px 12px; border-radius: 999px; font-weight: 700; font-size: 0.85rem; }
+        .price { font-size: 1.12rem; font-weight: 700; margin-top: 8px; }
 
-  .badge{
-    position:absolute;
-    right:12px; top:-12px;
-    background:var(--laranja);
-    color:var(--branco);
-    padding:6px 12px;
-    border-radius:999px;
-    font-weight:700;
-    font-size:0.85rem;
-    box-shadow:0 8px 20px rgba(255,140,0,0.12);
-  }
-  .price{ font-size:1.12rem; font-weight:700; margin-top:8px; color:var(--texto); }
+        .how, .testimonials { background: var(--branco); padding: 28px; border-radius: 12px; box-shadow: 0 12px 30px rgba(16,24,40,0.06); margin-top: 28px; }
+        .how ul { list-style: none; padding: 0; display: grid; gap: 10px; }
+        .how li { padding: 10px 12px; background: #fbfbfd; border-left: 4px solid var(--laranja); border-radius: 8px; }
 
-  /* testimonials / how it works */
-  .how, .testimonials{ background:var(--branco); padding:28px; border-radius:12px; box-shadow:0 12px 30px rgba(16,24,40,0.06); margin-top:28px; }
-  .how ul{ list-style:none; padding:0; margin:0; display:grid; gap:10px; }
-  .how li{ padding:10px 12px; background:#fbfbfd; border-left:4px solid var(--laranja); border-radius:8px; }
+        footer { text-align: center; padding: 40px; color: #fff; background: linear-gradient(90deg, var(--azul), var(--vermelho)); margin-top: 60px; }
 
-  .testimonial{ font-style:italic; color:#334155; margin-bottom:10px; }
-
-  footer{ text-align:center; padding:30px; color:#fff; background:linear-gradient(90deg,var(--azul),var(--vermelho)); margin-top:60px; }
-
-  /* Responsive */
-  @media(max-width:980px){
-    .hero-inner{ gap:20px; }
-    .hero-image{ flex-basis:360px; max-width:360px; }
-    .top-cta{ justify-content:center; }
-  }
-  @media(max-width:700px){
-    .hero-inner{ flex-direction:column-reverse; align-items:center; }
-    .hero-copy{ text-align:center; }
-    .hero-image{ flex-basis:62vw; max-width:62vw; }
-  }
-</style>
+        @media(max-width:700px){
+            .hero-inner { flex-direction: column-reverse; }
+            .hero-image { flex-basis: 62vw; max-width: 62vw; }
+        }
+    </style>
 </head>
 <body>
 
-<!-- TOP CTA -->
-<div class="top-cta" aria-hidden="false">
-  <a href="https://wa.me/436767580501?text=Olá,+Anderson!+Quero+garantir+minha+vaga+nas+aulas." 
-     target="_blank" 
-     class="cta-btn">
-    💬 Agendar Agora
-  </a>
+<div class="top-cta">
+    <a href="#" 
+       class="cta-btn js-whatsapp-link" 
+       data-msg="Olá, Anderson! Quero garantir minha vaga nas aulas."
+       rel="noopener noreferrer">
+       💬 Agendar Agora
+    </a>
 </div>
 
-
-<!-- HERO -->
 <header class="hero" role="banner">
-  <div class="hero-inner">
+    <div class="hero-inner">
+        <div class="hero-copy">
+            <h1>Domine o Inglês e o Alemão com Confiança</h1>
+            <p><strong>Anderson Teacher</strong> — aulas premium com foco em conversação. <span style="font-weight:700;">+120 alunos já evoluíram.</span></p>
 
-    <!-- COPY -->
-    <div class="hero-copy">
-      <h1>Domine o Inglês e o Alemão com Confiança</h1>
-      <p><strong>Anderson Teacher</strong> — aulas premium, práticas e com foco em conversação. 
-      Método direto ao ponto para quem quer falar de verdade. <span style="color:rgba(255,255,255,0.95); font-weight:700;">+120 alunos já evoluíram.</span></p>
+            <div class="hero-cta-row">
+                <a class="btn pulse js-whatsapp-link" href="#" data-msg="Olá, quero garantir minha vaga">💬 Quero Começar</a>
+                <a class="btn" href="#pacotes">Ver Planos</a>
+            </div>
+        </div>
 
-      <div class="hero-cta-row">
-        <a class="btn pulse" href="https://wa.me/436767580501?text=Olá,+quero+garantir+minha+vaga" target="_blank">💬 Quero Começar</a>
-        <a class="btn" href="#pacotes">Ver Planos</a>
-      </div>
-
-      <p style="margin-top:12px; color:rgba(255,240,240,0.9); font-size:0.95rem;">
-        ⚠️ Vagas limitadas — próxima turma com vagas até <strong>domingo</strong>.
-      </p>
+        <div class="hero-image" id="tiltWrap">
+            <div class="tilt-card" id="tiltCard">
+                <img src="foto.jpeg" alt="Professor Anderson">
+            </div>
+        </div>
     </div>
-
-    <!-- IMAGE with interactive tilt -->
-    <div class="hero-image" id="tiltWrap" aria-hidden="false">
-      <div class="tilt-card" id="tiltCard">
-        <!-- Substitua o src abaixo pela sua foto 500x900 (ou mantenha o nome no servidor) -->
-        <img src="foto.jpeg" alt="Professor Anderson — aulas de inglês e alemão" id="profImg">
-      </div>
-    </div>
-
-  </div>
 </header>
 
-<!-- CONTENT -->
 <main>
-  <section id="pacotes" class="container" aria-labelledby="planosTitle">
-    <h2 id="planosTitle">Escolha seu Plano Ideal</h2>
+    <section id="pacotes" class="container">
+        <h2>Escolha seu Plano Ideal</h2>
+        <div class="services">
+            <article class="card">
+                <h3>Aula Avulsa</h3>
+                <div class="price">1h — R$ 140</div>
+                <p>Ideal para diagnóstico personalizado.</p>
+                <a class="btn js-whatsapp-link" href="#" data-msg="Quero agendar aula avulsa">Agendar</a>
+            </article>
 
-    <div class="services" role="list">
-      <article class="card" role="listitem" aria-label="Aula Avulsa">
-        <h3>Aula Avulsa</h3>
-        <div class="price">1h — R$ 140</div>
-        <p>Ideal para experimentar a metodologia e receber diagnóstico personalizado.</p>
-        <a class="btn" href="https://wa.me/436767580501?text=Quero+agendar+aula+avulsa" target="_blank">Agendar</a>
-      </article>
+            <article class="card">
+                <span class="badge">Mais Popular</span>
+                <h3>1x por Semana</h3>
+                <div class="price">4 aulas/mês — R$ 400</div>
+                <p>Consistência para evolução rápida.</p>
+                <a class="btn js-whatsapp-link" href="#" data-msg="Quero reservar o pacote 1x por semana">Reservar</a>
+            </article>
 
-      <article class="card" role="listitem" aria-label="Pacote 1x por semana">
-        <span class="badge">Mais Popular</span>
-        <h3>1x por Semana</h3>
-        <div class="price">4 aulas/mês — R$ 400</div>
-        <p>Consistência para evolução rápida — recomendado para quem tem rotina e quer resultados.</p>
-        <a class="btn" href="https://wa.me/436767580501?text=Quero+reservar+o+pacote+1x+por+semana" target="_blank">Reservar</a>
-      </article>
-
-      <article class="card" role="listitem" aria-label="Pacote 2x por semana">
-        <h3>2x por Semana</h3>
-        <div class="price">8 aulas/mês — R$ 600</div>
-        <p>Imersão eficaz para quem precisa acelerar o aprendizado.</p>
-        <a class="btn" href="https://wa.me/436767580501?text=Quero+comprar+o+pacote+2x+por+semana" target="_blank">Comprar</a>
-      </article>
-    </div>
-
-    <div class="how" style="margin-top:26px;">
-      <h3 style="margin-top:0; margin-bottom:8px;">Como Funciona</h3>
-      <ul>
-        <li>Escolha o plano e fale comigo pelo WhatsApp.</li>
-        <li>Envie seu nível atual e objetivo.</li>
-        <li>Pagamento via Pix/PayPal e agendamento imediato.</li>
-        <li>Receba material e feedback personalizado.</li>
-      </ul>
-    </div>
-
-    <div class="testimonials" style="margin-top:20px;">
-      <h3 style="margin-top:0;">Depoimentos</h3>
-      <div class="testimonial">"Aulas práticas e objetivas — falo com confiança!" – Maria S.</div>
-      <div class="testimonial">"Melhorei minha pronúncia e fluência em meses." – João P.</div>
-    </div>
-
-  </section>
+            <article class="card">
+                <h3>2x por Semana</h3>
+                <div class="price">8 aulas/mês — R$ 600</div>
+                <p>Imersão eficaz para acelerar o aprendizado.</p>
+                <a class="btn js-whatsapp-link" href="#" data-msg="Quero comprar o pacote 2x por semana">Comprar</a>
+            </article>
+        </div>
+    </section>
 </main>
 
 <footer>
-  © 2025 Anderson Teacher — <a href="https://wa.me/436767580501?text=Olá" style="color:rgba(255,255,255,0.95); text-decoration:underline;">Fale pelo WhatsApp</a>
+    © 2025 Anderson Teacher — 
+    <a href="#" class="js-whatsapp-link" data-msg="Olá" style="color:#fff; text-decoration:underline;">Fale pelo WhatsApp</a>
 </footer>
 
-<!-- Tilt JS (leve, sem libs) -->
 <script>
-  (function(){
-    const card = document.getElementById('tiltCard');
-    const wrap = document.getElementById('tiltWrap');
+/**
+ * STEP 2: Encapsulate logic in an IIFE to protect the global scope.
+ * We use Base64 to encode the sensitive phone number.
+ */
+(function() {
+    "use strict";
 
-    if(!card || !wrap) return;
+    // Encoded phone number (Security through Obscurity)
+    // Decodes to: 436767580501
+    const _p = atob("NDM2NzY3NTgwNTAx");
+    const _base = "https://wa.me/";
 
-    const sensitivity = 18; // menor = mais sutil
-    function handleMove(e){
-      const rect = wrap.getBoundingClientRect();
-      const x = (e.clientX || (e.touches && e.touches[0].clientX)) - rect.left;
-      const y = (e.clientY || (e.touches && e.touches[0].clientY)) - rect.top;
-      const halfX = rect.width/2;
-      const halfY = rect.height/2;
-      const rotY = ((x - halfX) / halfX) * sensitivity;
-      const rotX = -((y - halfY) / halfY) * sensitivity;
-      card.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg) translateZ(6px)`;
-      // subtle parallax on image
-      const img = card.querySelector('img');
-      if(img){
-        img.style.transform = `translateZ(18px) translateX(${rotY/8}px) translateY(${rotX/8}px) scale(1.01)`;
-      }
-    }
+    /**
+     * STEP 3: Centralized Link Handler
+     * Prevents hardcoded links and allows adding security headers dynamically.
+     */
+    const initWhatsAppLinks = () => {
+        const links = document.querySelectorAll('.js-whatsapp-link');
+        
+        links.forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Prevent default jump if href is '#'
+                e.preventDefault();
+                
+                const message = encodeURIComponent(this.getAttribute('data-msg') || "");
+                const finalUrl = `${_base}${_p}?text=${message}`;
+                
+                // Open in new tab with security best practices
+                const win = window.open(finalUrl, '_blank', 'noopener,noreferrer');
+                if (win) win.opener = null;
+            });
+        });
+    };
 
-    function reset(){
-      card.style.transform = `rotateX(0deg) rotateY(0deg) translateZ(0px)`;
-      const img = card.querySelector('img');
-      if(img) img.style.transform = `translateZ(12px)`;
-    }
+    /**
+     * STEP 4: Interactive UI Logic (Tilt Effect)
+     */
+    const initTiltEffect = () => {
+        const card = document.getElementById('tiltCard');
+        const wrap = document.getElementById('tiltWrap');
+        if(!card || !wrap) return;
 
-    wrap.addEventListener('mousemove', handleMove);
-    wrap.addEventListener('touchmove', handleMove, {passive:true});
-    wrap.addEventListener('mouseleave', reset);
-    wrap.addEventListener('touchend', reset);
+        const sensitivity = 15;
 
-    // accessibility: keyboard focus effect
-    card.addEventListener('focus', ()=>{ card.style.transform='scale(1.01)';});
-    card.addEventListener('blur', reset);
-  })();
+        wrap.addEventListener('mousemove', (e) => {
+            const rect = wrap.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const px = (x / rect.width) * 2 - 1; 
+            const py = (y / rect.height) * 2 - 1;
+
+            card.style.transform = `rotateY(${px * sensitivity}deg) rotateX(${-py * sensitivity}deg)`;
+        });
+
+        wrap.addEventListener('mouseleave', () => {
+            card.style.transform = `rotateX(0deg) rotateY(0deg)`;
+        });
+    };
+
+    // Run initializers
+    initWhatsAppLinks();
+    initTiltEffect();
+
+})();
 </script>
 
 </body>
